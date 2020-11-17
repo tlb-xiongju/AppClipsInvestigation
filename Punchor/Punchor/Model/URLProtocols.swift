@@ -27,7 +27,7 @@ class PunchURLProtocol: URLProtocol {
             self.cancelledOrCompleted = true
         })
         
-        PunchURLProtocol.queue.asyncAfter(deadline: .init(uptimeNanoseconds: 2000 * NSEC_PER_MSEC), execute: block)
+        PunchURLProtocol.queue.asyncAfter(deadline: .now() + 3, execute: block)
     }
     
     override func stopLoading() {
