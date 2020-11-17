@@ -8,6 +8,8 @@
 import UIKit
 
 class HistoryViewController: UITableViewController {
+    
+    var date: Date?
 
     override func viewDidLoad() {
         super.viewDidLoad()

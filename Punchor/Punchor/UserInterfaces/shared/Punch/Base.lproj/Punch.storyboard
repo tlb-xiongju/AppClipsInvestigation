@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PunchViewController" customModule="Punchor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRd-3b-am1">
-                                <rect key="frame" x="24" y="373.5" width="181" height="319.5"/>
+                                <rect key="frame" x="0.0" y="373.5" width="206.5" height="439.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="出勤">
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrV-jJ-FVe">
-                                <rect key="frame" x="209" y="373.5" width="181" height="319.5"/>
+                                <rect key="frame" x="207.5" y="373.5" width="206.5" height="439.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="退勤">
@@ -55,23 +55,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zSN-gP-LLJ" secondAttribute="trailing" constant="24" id="ENz-Zw-g88"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VrV-jJ-FVe" secondAttribute="trailing" constant="24" id="Esv-ob-Wte"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VrV-jJ-FVe" secondAttribute="trailing" id="Esv-ob-Wte"/>
                             <constraint firstItem="7hN-9A-Kx5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fh8-mE-zeG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7hN-9A-Kx5" secondAttribute="trailing" id="Ge7-CK-DOD"/>
-                            <constraint firstItem="hRd-3b-am1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="LJ7-nV-oEa"/>
+                            <constraint firstItem="hRd-3b-am1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LJ7-nV-oEa"/>
                             <constraint firstItem="hRd-3b-am1" firstAttribute="top" secondItem="zSN-gP-LLJ" secondAttribute="bottom" constant="120" id="MIT-Gn-qVx"/>
                             <constraint firstItem="VrV-jJ-FVe" firstAttribute="centerY" secondItem="hRd-3b-am1" secondAttribute="centerY" id="OrF-cG-2jv"/>
                             <constraint firstItem="7hN-9A-Kx5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rwi-o8-xyf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hRd-3b-am1" secondAttribute="bottom" constant="120" id="SCE-VB-QdN"/>
+                            <constraint firstAttribute="bottom" secondItem="hRd-3b-am1" secondAttribute="bottom" id="SCE-VB-QdN"/>
                             <constraint firstItem="VrV-jJ-FVe" firstAttribute="height" secondItem="hRd-3b-am1" secondAttribute="height" id="USc-kb-AjI"/>
                             <constraint firstItem="VrV-jJ-FVe" firstAttribute="width" secondItem="hRd-3b-am1" secondAttribute="width" id="dzH-8s-vX0"/>
-                            <constraint firstItem="VrV-jJ-FVe" firstAttribute="leading" secondItem="hRd-3b-am1" secondAttribute="trailing" constant="4" id="jJb-cF-rs7"/>
+                            <constraint firstItem="VrV-jJ-FVe" firstAttribute="leading" secondItem="hRd-3b-am1" secondAttribute="trailing" constant="1" id="jJb-cF-rs7"/>
                             <constraint firstItem="zSN-gP-LLJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="nBr-F8-QSF"/>
                             <constraint firstItem="zSN-gP-LLJ" firstAttribute="top" secondItem="7hN-9A-Kx5" secondAttribute="bottom" constant="24" id="ywx-Oj-pkv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hbn-M4-stv"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="addressLabel" destination="zSN-gP-LLJ" id="4eD-ob-J1M"/>
                         <outlet property="backButton" destination="VrV-jJ-FVe" id="kUM-DE-jWq"/>
@@ -87,7 +87,6 @@
         <scene sceneID="O09-Nb-Nn5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rV5-Hc-y8t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="wDD-2T-QQX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d2X-mg-a5e">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

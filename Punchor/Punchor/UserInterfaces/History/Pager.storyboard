@@ -27,11 +27,19 @@
         <!--2020年11月-->
         <scene sceneID="lnd-sD-O0H">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="LB0-Jx-UYh" customClass="PagerViewController" customModule="Punchor" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="8" navigationOrientation="horizontal" spineLocation="none" doubleSided="YES" id="LB0-Jx-UYh" customClass="PagerViewController" customModule="Punchor" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="history" id="7Qj-nj-rz1"/>
                     <navigationItem key="navigationItem" title="2020年11月" id="2MV-BI-uSR">
-                        <barButtonItem key="leftBarButtonItem" image="foward" id="kgL-cS-zFZ"/>
-                        <barButtonItem key="rightBarButtonItem" image="backward" id="6iB-jB-oAL"/>
+                        <barButtonItem key="leftBarButtonItem" image="iconBackward" id="kgL-cS-zFZ">
+                            <connections>
+                                <action selector="backwardButtonTap:" destination="LB0-Jx-UYh" id="JZz-Jj-fYm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="iconForward" id="2AD-hU-iHI">
+                            <connections>
+                                <action selector="forwardButtonTap:" destination="LB0-Jx-UYh" id="U6G-xg-SH4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </pageViewController>
@@ -41,7 +49,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backward" width="24" height="24"/>
-        <image name="foward" width="24" height="24"/>
+        <image name="iconBackward" width="23" height="23"/>
+        <image name="iconForward" width="22" height="22"/>
     </resources>
 </document>

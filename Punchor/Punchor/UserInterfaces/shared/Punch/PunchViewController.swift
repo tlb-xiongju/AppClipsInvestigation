@@ -19,11 +19,11 @@ class PunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        goButton.layer.maskedCorners = .init(rawValue: 5)
-        goButton.layer.cornerRadius = 15
+        goButton.layer.maskedCorners = .init(rawValue: 1)
+        goButton.layer.cornerRadius = 36
         goButton.clipsToBounds = true
-        backButton.layer.maskedCorners = .init(rawValue: 10)
-        backButton.layer.cornerRadius = 15
+        backButton.layer.maskedCorners = .init(rawValue: 2)
+        backButton.layer.cornerRadius = 36
         backButton.clipsToBounds = true
         
         let dateFormatter = DateFormatter()

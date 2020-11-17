@@ -29,16 +29,16 @@
         <scene sceneID="dSL-J4-C8M">
             <objects>
                 <viewControllerPlaceholder storyboardName="Punch" id="o79-cU-NUp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="打刻" id="rxs-dk-VL2"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="tabHomeOn" id="rxs-dk-VL2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7Z-xw-rvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="242"/>
         </scene>
-        <!--History-->
+        <!--Pager-->
         <scene sceneID="7BE-kh-M3X">
             <objects>
-                <viewControllerPlaceholder storyboardName="History" id="2oF-Rr-pAc" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Pager" id="2oF-Rr-pAc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="歴史" id="fcH-To-WzZ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcK-kw-DZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -56,4 +56,7 @@
             <point key="canvasLocation" x="388" y="441"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabHomeOn" width="27" height="27"/>
+    </resources>
 </document>
