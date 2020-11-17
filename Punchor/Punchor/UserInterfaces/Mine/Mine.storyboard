@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="7ne-eJ-8pU" customClass="MineViewController" customModule="Punchor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="8" estimatedSectionHeaderHeight="8" sectionFooterHeight="18" estimatedSectionFooterHeight="18" id="ovH-Bd-rfE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <inset key="separatorInset" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
@@ -174,9 +174,7 @@
                             <outlet property="delegate" destination="7ne-eJ-8pU" id="QCL-Qm-RLY"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="hGj-aF-c7V"/>
                     <navigationItem key="navigationItem" title="自分" id="pHA-My-9VG"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMu-oH-Dsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +184,9 @@
         <scene sceneID="scv-Sf-7aP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="edx-Wh-8Zu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="oGO-ry-Nne"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KAU-fG-FUX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

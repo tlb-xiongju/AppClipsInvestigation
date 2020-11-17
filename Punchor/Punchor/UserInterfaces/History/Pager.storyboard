@@ -10,7 +10,9 @@
         <scene sceneID="wwx-Vh-hug">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VN-fU-GB9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="history" id="Vh0-MS-Rhp"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cxa-nq-taN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,7 +30,6 @@
         <scene sceneID="lnd-sD-O0H">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="8" navigationOrientation="horizontal" spineLocation="none" doubleSided="YES" id="LB0-Jx-UYh" customClass="PagerViewController" customModule="Punchor" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="7Qj-nj-rz1"/>
                     <navigationItem key="navigationItem" title="2020年11月" id="2MV-BI-uSR">
                         <barButtonItem key="leftBarButtonItem" image="iconBackward" id="kgL-cS-zFZ">
                             <connections>
@@ -41,7 +42,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Km-ax-CN0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

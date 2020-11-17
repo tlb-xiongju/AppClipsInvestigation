@@ -29,7 +29,7 @@
         <scene sceneID="dSL-J4-C8M">
             <objects>
                 <viewControllerPlaceholder storyboardName="Punch" id="o79-cU-NUp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ホーム" image="tabHomeOn" id="rxs-dk-VL2"/>
+                    <tabBarItem key="tabBarItem" title="" id="rxs-dk-VL2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7Z-xw-rvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,7 +39,7 @@
         <scene sceneID="7BE-kh-M3X">
             <objects>
                 <viewControllerPlaceholder storyboardName="Pager" id="2oF-Rr-pAc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="歴史" id="fcH-To-WzZ"/>
+                    <tabBarItem key="tabBarItem" title="" id="fcH-To-WzZ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcK-kw-DZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,14 +49,11 @@
         <scene sceneID="cv8-Wv-Kbf">
             <objects>
                 <viewControllerPlaceholder storyboardName="Mine" id="oDs-jy-RGM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="マイ" id="ytG-LY-5Ay"/>
+                    <tabBarItem key="tabBarItem" title="" id="ytG-LY-5Ay"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjz-W3-guP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="441"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="tabHomeOn" width="27" height="27"/>
-    </resources>
 </document>
