@@ -19,7 +19,6 @@
 		DF5797F9255AB7BE0030B4BC /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797F8255AB7BE0030B4BC /* Mine.storyboard */; };
 		DF5797FD255AB7DC0030B4BC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797FC255AB7DC0030B4BC /* TabBarController.swift */; };
 		DF579802255AB7F50030B4BC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF579801255AB7F50030B4BC /* TabBar.storyboard */; };
-		DF579816255AC70A0030B4BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF579815255AC70A0030B4BC /* Assets.xcassets */; };
 		DF579819255AC70A0030B4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF579817255AC70A0030B4BC /* LaunchScreen.storyboard */; };
 		DF57981E255AC70A0030B4BC /* PunchorClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = DF57980A255AC7080030B4BC /* PunchorClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DF7D75202562268700142271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D2255AB57E0030B4BC /* AppDelegate.swift */; };
@@ -31,6 +30,7 @@
 		DFA8FB012563AB39007A562E /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8FAF72563A564007A562E /* Record.swift */; };
 		DFA8FB042563AB3C007A562E /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8FAFD2563A7C2007A562E /* Cache.swift */; };
 		DFD1BE4B2563ADBA00F4F3C2 /* URLProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1BE4A2563ADBA00F4F3C2 /* URLProtocols.swift */; };
+		DFD1BE822563DAD900F4F3C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5797DB255AB5810030B4BC /* Assets.xcassets */; };
 		DFD3749825637A6B007FFAC1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3749725637A6B007FFAC1 /* HistoryViewController.swift */; };
 		DFD3749C25637A74007FFAC1 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD3749B25637A74007FFAC1 /* History.storyboard */; };
 		DFD374A125637ABD007FFAC1 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3749F25637ABD007FFAC1 /* HistoryCell.swift */; };
@@ -79,7 +79,6 @@
 		DF5797FC255AB7DC0030B4BC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DF579801255AB7F50030B4BC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		DF57980A255AC7080030B4BC /* PunchorClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunchorClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF579815255AC70A0030B4BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF579818255AC70A0030B4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF57981A255AC70A0030B4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF57981B255AC70A0030B4BC /* PunchorClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PunchorClip.entitlements; sourceTree = "<group>"; };
@@ -204,7 +203,6 @@
 		DF57980B255AC7080030B4BC /* PunchorClip */ = {
 			isa = PBXGroup;
 			children = (
-				DF579815255AC70A0030B4BC /* Assets.xcassets */,
 				DF579817255AC70A0030B4BC /* LaunchScreen.storyboard */,
 				DF57981A255AC70A0030B4BC /* Info.plist */,
 				DF57981B255AC70A0030B4BC /* PunchorClip.entitlements */,
@@ -356,7 +354,7 @@
 			files = (
 				DF579819255AC70A0030B4BC /* LaunchScreen.storyboard in Resources */,
 				DFD7713E2561604C0005DE00 /* Punch.storyboard in Resources */,
-				DF579816255AC70A0030B4BC /* Assets.xcassets in Resources */,
+				DFD1BE822563DAD900F4F3C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

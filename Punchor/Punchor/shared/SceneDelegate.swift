@@ -6,6 +6,10 @@
 //
 
 import UIKit
+#if APPCLIP
+import AppClip
+import CoreLocation
+#endif
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -46,7 +50,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    
+    
+    #if APPCLIP
+    func verifyUserLocation(_ activity: NSUserActivity?) {
+        guard let activity = activity,
+              activity.activityType == NSUserActivityTypeBrowsingWeb,
+              let payload = activity.appClipActivationPayload,
+              let incomingURL = activity.webpageURL,
+              let region = location(from: incomingURL) else {
+            return
+        }
+        
+        payload.confirmAcquired(in: region) { inRegion, error in
+            
+        }
+    }
+    
+    func location(from url: URL) -> CLRegion? {
+        let coordinates = CLLocationCoordinate2D(latitude: 37.334722,
+                                                         longitude: 122.008889)
+        return CLCircularRegion(center: coordinates,
+                                radius: 100,
+                                identifier: "Apple Park")
+    }
 
+    #endif
 
 }
 

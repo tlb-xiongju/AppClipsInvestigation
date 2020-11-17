@@ -29,7 +29,13 @@ extension Cache {
 let remoteMonthRecords =
 """
 [
+    {
+        "monthYear": "2020-01",
+        "records": [
 
+                ]
+    },
+    {}
 ]
 """
 

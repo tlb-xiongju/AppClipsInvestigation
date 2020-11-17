@@ -9,14 +9,12 @@ import Foundation
 import CoreLocation
 
 struct Record {
-    let start: Date
-    let end: Date
-    let longitude: Double
-    let latitude: Double
+    let start: String
+    let end: String
     let address: String
 }
 
 struct MonthRecords {
-    let monthYear: Date
+    let monthYear: String
     let records: [Record]
 }

@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 class PunchViewController: UIViewController {
+    struct State {
+        var isLoading: Bool = false
+    }
     
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var addressLabel: UILabel!
@@ -15,6 +19,7 @@ class PunchViewController: UIViewController {
     @IBOutlet private weak var backButton: UIButton!
     
     private lazy var timer = Timer()
+    private var state: State = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,19 +41,22 @@ class PunchViewController: UIViewController {
         timeFormatter.calendar = .init(identifier: .gregorian)
         timeFormatter.dateFormat = "HH:mm"
         timeLabel.text = timeFormatter.string(from: Date())
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.timeLabel.text = timeFormatter.string(from: Date())
         }
         
 
-        
-        #if APPCLIP
-        
+        #if !APPCLIP
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
         #else
         
         #endif
-
     }
+    
+    private let locationManager = CLLocationManager()
+    private let geocoder = CLGeocoder()
     
     @IBAction private func goButtonTap(_ sender: UIButton) {
         
@@ -56,6 +64,26 @@ class PunchViewController: UIViewController {
     
     @IBAction private func backButtonTap(_ sender: UIButton) {
         
+    }
+}
+
+extension PunchViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard !geocoder.isGeocoding, let location = locations.last else { return }
+        
+        geocoder.reverseGeocodeLocation(location) { placemark, error in
+            self.addressLabel.text = placemark?.last?.adderss
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+       print(error)
+    }
+}
+
+extension CLPlacemark {
+    var adderss: String? {
+        "\(administrativeArea ?? "")\(locality ?? "")\(subLocality ?? "")"
     }
 }
 

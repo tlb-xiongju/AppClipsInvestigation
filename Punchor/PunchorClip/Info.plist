@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Punchor</string>
+	<string>Punchor Clip</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,8 +27,10 @@
 		<key>NSAppClipRequestEphemeralUserNotification</key>
 		<false/>
 		<key>NSAppClipRequestLocationConfirmation</key>
-		<false/>
+		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App Clip needs to use location info!</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
