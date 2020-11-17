@@ -25,17 +25,3 @@ extension Cache {
     func add(record: Record) {
     }
 }
-
-let remoteMonthRecords =
-"""
-[
-    {
-        "monthYear": "2020-01",
-        "records": [
-
-                ]
-    },
-    {}
-]
-"""
-

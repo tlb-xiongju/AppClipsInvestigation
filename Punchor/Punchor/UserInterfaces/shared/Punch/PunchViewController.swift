@@ -48,26 +48,44 @@ class PunchViewController: UIViewController {
 
         #if !APPCLIP
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
+        if locationManager.authorizationStatus == .authorizedWhenInUse ||
+            locationManager.authorizationStatus == .authorizedAlways{
+            locationManager.requestLocation()
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
         #else
         
         #endif
     }
     
+    #if APPCLIP
+    #else
     private let locationManager = CLLocationManager()
     private let geocoder = CLGeocoder()
+    #endif
     
     @IBAction private func goButtonTap(_ sender: UIButton) {
-        
+        showIndicator()
+        PunchManager.shared.punch(.init(state: .start("11:23"), address: "Tokyo, Chiyoda")) {
+            self.removeIndicator()
+        }
     }
     
     @IBAction private func backButtonTap(_ sender: UIButton) {
         
     }
 }
+extension PunchViewController: IndicatorDisplayable {}
 
 extension PunchViewController: CLLocationManagerDelegate {
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard !geocoder.isGeocoding, let location = locations.last else { return }
         

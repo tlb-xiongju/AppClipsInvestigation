@@ -47,6 +47,7 @@ class HistoryViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let className = String(describing: HistoryHeaderView.self)
-        return tableView.dequeueReusableHeaderFooterView(withIdentifier: className)
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: className)
+        return view
     }
 }
