@@ -23,6 +23,9 @@
                                 <state key="normal" title="出勤">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rvh-Gn-Z8U"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京都千代田区神田小川町2-12 小川町進興ビル" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-gP-LLJ">
                                 <rect key="frame" x="24" y="210.5" width="366" height="43"/>
@@ -43,6 +46,9 @@
                                 <state key="normal" title="退勤">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qyt-hj-W7e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,7 +75,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="zSN-gP-LLJ" id="4eD-ob-J1M"/>
                         <outlet property="backButton" destination="VrV-jJ-FVe" id="kUM-DE-jWq"/>
-                        <outlet property="goButton" destination="hRd-3b-am1" id="42Z-Y7-vRs"/>
+                        <outlet property="goButton" destination="hRd-3b-am1" id="VZq-RB-0TS"/>
                         <outlet property="timeLabel" destination="7hN-9A-Kx5" id="hQg-QD-8Sn"/>
                     </connections>
                 </viewController>

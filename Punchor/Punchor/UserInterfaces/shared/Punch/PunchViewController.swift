@@ -49,7 +49,13 @@ class PunchViewController: UIViewController {
         #endif
 
     }
-
-
+    
+    @IBAction private func goButtonTap(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction private func backButtonTap(_ sender: UIButton) {
+        
+    }
 }
 
