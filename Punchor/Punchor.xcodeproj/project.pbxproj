@@ -13,8 +13,8 @@
 		DF5797DA255AB57E0030B4BC /* Punch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797D8255AB57E0030B4BC /* Punch.storyboard */; };
 		DF5797DC255AB5810030B4BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5797DB255AB5810030B4BC /* Assets.xcassets */; };
 		DF5797DF255AB5810030B4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797DD255AB5810030B4BC /* LaunchScreen.storyboard */; };
-		DF5797EE255AB77C0030B4BC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797ED255AB77C0030B4BC /* HistoryViewController.swift */; };
-		DF5797F1255AB7830030B4BC /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797F0255AB7830030B4BC /* History.storyboard */; };
+		DF5797EE255AB77C0030B4BC /* PagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797ED255AB77C0030B4BC /* PagerViewController.swift */; };
+		DF5797F1255AB7830030B4BC /* Pager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797F0255AB7830030B4BC /* Pager.storyboard */; };
 		DF5797F5255AB7AD0030B4BC /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797F4255AB7AD0030B4BC /* MineViewController.swift */; };
 		DF5797F9255AB7BE0030B4BC /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797F8255AB7BE0030B4BC /* Mine.storyboard */; };
 		DF5797FD255AB7DC0030B4BC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797FC255AB7DC0030B4BC /* TabBarController.swift */; };
@@ -24,6 +24,10 @@
 		DF57981E255AC70A0030B4BC /* PunchorClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = DF57980A255AC7080030B4BC /* PunchorClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DF7D75202562268700142271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D2255AB57E0030B4BC /* AppDelegate.swift */; };
 		DF7D75232562268E00142271 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D4255AB57E0030B4BC /* SceneDelegate.swift */; };
+		DFD3749825637A6B007FFAC1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3749725637A6B007FFAC1 /* HistoryViewController.swift */; };
+		DFD3749C25637A74007FFAC1 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD3749B25637A74007FFAC1 /* History.storyboard */; };
+		DFD374A125637ABD007FFAC1 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3749F25637ABD007FFAC1 /* HistoryCell.swift */; };
+		DFD374A225637ABD007FFAC1 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD374A025637ABD007FFAC1 /* HistoryCell.xib */; };
 		DFD77139256160330005DE00 /* PunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D6255AB57E0030B4BC /* PunchViewController.swift */; };
 		DFD7713E2561604C0005DE00 /* Punch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797D8255AB57E0030B4BC /* Punch.storyboard */; };
 /* End PBXBuildFile section */
@@ -61,8 +65,8 @@
 		DF5797DB255AB5810030B4BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF5797DE255AB5810030B4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF5797E0255AB5810030B4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF5797ED255AB77C0030B4BC /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		DF5797F0255AB7830030B4BC /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		DF5797ED255AB77C0030B4BC /* PagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewController.swift; sourceTree = "<group>"; };
+		DF5797F0255AB7830030B4BC /* Pager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pager.storyboard; sourceTree = "<group>"; };
 		DF5797F4255AB7AD0030B4BC /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		DF5797F8255AB7BE0030B4BC /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		DF5797FC255AB7DC0030B4BC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,10 @@
 		DF579818255AC70A0030B4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF57981A255AC70A0030B4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF57981B255AC70A0030B4BC /* PunchorClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PunchorClip.entitlements; sourceTree = "<group>"; };
+		DFD3749725637A6B007FFAC1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		DFD3749B25637A74007FFAC1 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		DFD3749F25637ABD007FFAC1 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		DFD374A025637ABD007FFAC1 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +162,12 @@
 		DF5797EC255AB73E0030B4BC /* History */ = {
 			isa = PBXGroup;
 			children = (
-				DF5797ED255AB77C0030B4BC /* HistoryViewController.swift */,
-				DF5797F0255AB7830030B4BC /* History.storyboard */,
+				DF5797ED255AB77C0030B4BC /* PagerViewController.swift */,
+				DF5797F0255AB7830030B4BC /* Pager.storyboard */,
+				DFD3749725637A6B007FFAC1 /* HistoryViewController.swift */,
+				DFD3749B25637A74007FFAC1 /* History.storyboard */,
+				DFD3749F25637ABD007FFAC1 /* HistoryCell.swift */,
+				DFD374A025637ABD007FFAC1 /* HistoryCell.xib */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -271,10 +283,12 @@
 			files = (
 				DF5797DF255AB5810030B4BC /* LaunchScreen.storyboard in Resources */,
 				DF5797DC255AB5810030B4BC /* Assets.xcassets in Resources */,
+				DFD374A225637ABD007FFAC1 /* HistoryCell.xib in Resources */,
+				DFD3749C25637A74007FFAC1 /* History.storyboard in Resources */,
 				DF5797F9255AB7BE0030B4BC /* Mine.storyboard in Resources */,
 				DF5797DA255AB57E0030B4BC /* Punch.storyboard in Resources */,
 				DF579802255AB7F50030B4BC /* TabBar.storyboard in Resources */,
-				DF5797F1255AB7830030B4BC /* History.storyboard in Resources */,
+				DF5797F1255AB7830030B4BC /* Pager.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +312,10 @@
 				DF5797D7255AB57E0030B4BC /* PunchViewController.swift in Sources */,
 				DF5797D3255AB57E0030B4BC /* AppDelegate.swift in Sources */,
 				DF5797D5255AB57E0030B4BC /* SceneDelegate.swift in Sources */,
-				DF5797EE255AB77C0030B4BC /* HistoryViewController.swift in Sources */,
+				DF5797EE255AB77C0030B4BC /* PagerViewController.swift in Sources */,
 				DF5797FD255AB7DC0030B4BC /* TabBarController.swift in Sources */,
+				DFD3749825637A6B007FFAC1 /* HistoryViewController.swift in Sources */,
+				DFD374A125637ABD007FFAC1 /* HistoryCell.swift in Sources */,
 				DF5797F5255AB7AD0030B4BC /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
