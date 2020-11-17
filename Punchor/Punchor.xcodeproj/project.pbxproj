@@ -121,8 +121,7 @@
 		DF5797D1255AB57E0030B4BC /* Punchor */ = {
 			isa = PBXGroup;
 			children = (
-				DF5797D2255AB57E0030B4BC /* AppDelegate.swift */,
-				DF5797D4255AB57E0030B4BC /* SceneDelegate.swift */,
+				DFD374A825637B9A007FFAC1 /* shared */,
 				DF5797E7255AB6C60030B4BC /* UserInterfaces */,
 				DFD374A525637B38007FFAC1 /* View */,
 				DF5797E9255AB7030030B4BC /* SupportFiles */,
@@ -133,10 +132,10 @@
 		DF5797E7255AB6C60030B4BC /* UserInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				DFD374A725637B83007FFAC1 /* shared */,
 				DF5797FB255AB7C30030B4BC /* TabBar */,
 				DF5797F7255AB7B20030B4BC /* Mine */,
 				DF5797EC255AB73E0030B4BC /* History */,
-				DF5797EB255AB7290030B4BC /* Punch */,
 			);
 			path = UserInterfaces;
 			sourceTree = "<group>";
@@ -215,6 +214,23 @@
 				DFD374A025637ABD007FFAC1 /* HistoryCell.xib */,
 			);
 			path = History;
+			sourceTree = "<group>";
+		};
+		DFD374A725637B83007FFAC1 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				DF5797EB255AB7290030B4BC /* Punch */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		DFD374A825637B9A007FFAC1 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				DF5797D2255AB57E0030B4BC /* AppDelegate.swift */,
+				DF5797D4255AB57E0030B4BC /* SceneDelegate.swift */,
+			);
+			path = shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
