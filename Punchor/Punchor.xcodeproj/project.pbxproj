@@ -124,6 +124,7 @@
 				DF5797D2255AB57E0030B4BC /* AppDelegate.swift */,
 				DF5797D4255AB57E0030B4BC /* SceneDelegate.swift */,
 				DF5797E7255AB6C60030B4BC /* UserInterfaces */,
+				DFD374A525637B38007FFAC1 /* View */,
 				DF5797E9255AB7030030B4BC /* SupportFiles */,
 			);
 			path = Punchor;
@@ -166,8 +167,6 @@
 				DF5797F0255AB7830030B4BC /* Pager.storyboard */,
 				DFD3749725637A6B007FFAC1 /* HistoryViewController.swift */,
 				DFD3749B25637A74007FFAC1 /* History.storyboard */,
-				DFD3749F25637ABD007FFAC1 /* HistoryCell.swift */,
-				DFD374A025637ABD007FFAC1 /* HistoryCell.xib */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -199,6 +198,23 @@
 				DF57981B255AC70A0030B4BC /* PunchorClip.entitlements */,
 			);
 			path = PunchorClip;
+			sourceTree = "<group>";
+		};
+		DFD374A525637B38007FFAC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFD374A625637B49007FFAC1 /* History */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DFD374A625637B49007FFAC1 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				DFD3749F25637ABD007FFAC1 /* HistoryCell.swift */,
+				DFD374A025637ABD007FFAC1 /* HistoryCell.xib */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
