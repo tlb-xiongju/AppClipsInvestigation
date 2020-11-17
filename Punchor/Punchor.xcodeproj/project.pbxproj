@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		DF5797D3255AB57E0030B4BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D2255AB57E0030B4BC /* AppDelegate.swift */; };
 		DF5797D5255AB57E0030B4BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D4255AB57E0030B4BC /* SceneDelegate.swift */; };
-		DF5797D7255AB57E0030B4BC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D6255AB57E0030B4BC /* HomeViewController.swift */; };
-		DF5797DA255AB57E0030B4BC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797D8255AB57E0030B4BC /* Home.storyboard */; };
+		DF5797D7255AB57E0030B4BC /* PunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D6255AB57E0030B4BC /* PunchViewController.swift */; };
+		DF5797DA255AB57E0030B4BC /* Punch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797D8255AB57E0030B4BC /* Punch.storyboard */; };
 		DF5797DC255AB5810030B4BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5797DB255AB5810030B4BC /* Assets.xcassets */; };
 		DF5797DF255AB5810030B4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797DD255AB5810030B4BC /* LaunchScreen.storyboard */; };
 		DF5797EE255AB77C0030B4BC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797ED255AB77C0030B4BC /* HistoryViewController.swift */; };
@@ -19,14 +19,45 @@
 		DF5797F9255AB7BE0030B4BC /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797F8255AB7BE0030B4BC /* Mine.storyboard */; };
 		DF5797FD255AB7DC0030B4BC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797FC255AB7DC0030B4BC /* TabBarController.swift */; };
 		DF579802255AB7F50030B4BC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF579801255AB7F50030B4BC /* TabBar.storyboard */; };
+		DF579816255AC70A0030B4BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF579815255AC70A0030B4BC /* Assets.xcassets */; };
+		DF579819255AC70A0030B4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF579817255AC70A0030B4BC /* LaunchScreen.storyboard */; };
+		DF57981E255AC70A0030B4BC /* PunchorClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = DF57980A255AC7080030B4BC /* PunchorClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DF7D75202562268700142271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D2255AB57E0030B4BC /* AppDelegate.swift */; };
+		DF7D75232562268E00142271 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D4255AB57E0030B4BC /* SceneDelegate.swift */; };
+		DFD77139256160330005DE00 /* PunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5797D6255AB57E0030B4BC /* PunchViewController.swift */; };
+		DFD7713E2561604C0005DE00 /* Punch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5797D8255AB57E0030B4BC /* Punch.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF57981C255AC70A0030B4BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF5797C7255AB57E0030B4BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF579809255AC7080030B4BC;
+			remoteInfo = PunchorClip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF579822255AC70A0030B4BC /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				DF57981E255AC70A0030B4BC /* PunchorClip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DF5797CF255AB57E0030B4BC /* Punchor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Punchor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5797D2255AB57E0030B4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF5797D4255AB57E0030B4BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF5797D6255AB57E0030B4BC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		DF5797D9255AB57E0030B4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		DF5797D6255AB57E0030B4BC /* PunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchViewController.swift; sourceTree = "<group>"; };
+		DF5797D9255AB57E0030B4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Punch.storyboard; sourceTree = "<group>"; };
 		DF5797DB255AB5810030B4BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF5797DE255AB5810030B4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF5797E0255AB5810030B4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,10 +67,22 @@
 		DF5797F8255AB7BE0030B4BC /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		DF5797FC255AB7DC0030B4BC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DF579801255AB7F50030B4BC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		DF57980A255AC7080030B4BC /* PunchorClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunchorClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF579815255AC70A0030B4BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF579818255AC70A0030B4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF57981A255AC70A0030B4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF57981B255AC70A0030B4BC /* PunchorClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PunchorClip.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DF5797CC255AB57E0030B4BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF579807255AC7080030B4BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				DF5797D1255AB57E0030B4BC /* Punchor */,
+				DF57980B255AC7080030B4BC /* PunchorClip */,
 				DF5797D0255AB57E0030B4BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				DF5797CF255AB57E0030B4BC /* Punchor.app */,
+				DF57980A255AC7080030B4BC /* PunchorClip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +127,7 @@
 				DF5797FB255AB7C30030B4BC /* TabBar */,
 				DF5797F7255AB7B20030B4BC /* Mine */,
 				DF5797EC255AB73E0030B4BC /* History */,
-				DF5797EB255AB7290030B4BC /* Home */,
+				DF5797EB255AB7290030B4BC /* Punch */,
 			);
 			path = UserInterfaces;
 			sourceTree = "<group>";
@@ -97,13 +142,13 @@
 			name = SupportFiles;
 			sourceTree = "<group>";
 		};
-		DF5797EB255AB7290030B4BC /* Home */ = {
+		DF5797EB255AB7290030B4BC /* Punch */ = {
 			isa = PBXGroup;
 			children = (
-				DF5797D6255AB57E0030B4BC /* HomeViewController.swift */,
-				DF5797D8255AB57E0030B4BC /* Home.storyboard */,
+				DF5797D6255AB57E0030B4BC /* PunchViewController.swift */,
+				DF5797D8255AB57E0030B4BC /* Punch.storyboard */,
 			);
-			path = Home;
+			path = Punch;
 			sourceTree = "<group>";
 		};
 		DF5797EC255AB73E0030B4BC /* History */ = {
@@ -133,6 +178,17 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		DF57980B255AC7080030B4BC /* PunchorClip */ = {
+			isa = PBXGroup;
+			children = (
+				DF579815255AC70A0030B4BC /* Assets.xcassets */,
+				DF579817255AC70A0030B4BC /* LaunchScreen.storyboard */,
+				DF57981A255AC70A0030B4BC /* Info.plist */,
+				DF57981B255AC70A0030B4BC /* PunchorClip.entitlements */,
+			);
+			path = PunchorClip;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,15 +199,34 @@
 				DF5797CB255AB57E0030B4BC /* Sources */,
 				DF5797CC255AB57E0030B4BC /* Frameworks */,
 				DF5797CD255AB57E0030B4BC /* Resources */,
+				DF579822255AC70A0030B4BC /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DF57981D255AC70A0030B4BC /* PBXTargetDependency */,
 			);
 			name = Punchor;
 			productName = Punchor;
 			productReference = DF5797CF255AB57E0030B4BC /* Punchor.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DF579809255AC7080030B4BC /* PunchorClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF57981F255AC70A0030B4BC /* Build configuration list for PBXNativeTarget "PunchorClip" */;
+			buildPhases = (
+				DF579806255AC7080030B4BC /* Sources */,
+				DF579807255AC7080030B4BC /* Frameworks */,
+				DF579808255AC7080030B4BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PunchorClip;
+			productName = PunchorClip;
+			productReference = DF57980A255AC7080030B4BC /* PunchorClip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
 /* End PBXNativeTarget section */
 
@@ -163,6 +238,9 @@
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					DF5797CE255AB57E0030B4BC = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					DF579809255AC7080030B4BC = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
@@ -181,6 +259,7 @@
 			projectRoot = "";
 			targets = (
 				DF5797CE255AB57E0030B4BC /* Punchor */,
+				DF579809255AC7080030B4BC /* PunchorClip */,
 			);
 		};
 /* End PBXProject section */
@@ -193,9 +272,19 @@
 				DF5797DF255AB5810030B4BC /* LaunchScreen.storyboard in Resources */,
 				DF5797DC255AB5810030B4BC /* Assets.xcassets in Resources */,
 				DF5797F9255AB7BE0030B4BC /* Mine.storyboard in Resources */,
-				DF5797DA255AB57E0030B4BC /* Home.storyboard in Resources */,
+				DF5797DA255AB57E0030B4BC /* Punch.storyboard in Resources */,
 				DF579802255AB7F50030B4BC /* TabBar.storyboard in Resources */,
 				DF5797F1255AB7830030B4BC /* History.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF579808255AC7080030B4BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF579819255AC70A0030B4BC /* LaunchScreen.storyboard in Resources */,
+				DFD7713E2561604C0005DE00 /* Punch.storyboard in Resources */,
+				DF579816255AC70A0030B4BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF5797D7255AB57E0030B4BC /* HomeViewController.swift in Sources */,
+				DF5797D7255AB57E0030B4BC /* PunchViewController.swift in Sources */,
 				DF5797D3255AB57E0030B4BC /* AppDelegate.swift in Sources */,
 				DF5797D5255AB57E0030B4BC /* SceneDelegate.swift in Sources */,
 				DF5797EE255AB77C0030B4BC /* HistoryViewController.swift in Sources */,
@@ -215,21 +304,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF579806255AC7080030B4BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF7D75202562268700142271 /* AppDelegate.swift in Sources */,
+				DFD77139256160330005DE00 /* PunchViewController.swift in Sources */,
+				DF7D75232562268E00142271 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DF57981D255AC70A0030B4BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF579809255AC7080030B4BC /* PunchorClip */;
+			targetProxy = DF57981C255AC70A0030B4BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		DF5797D8255AB57E0030B4BC /* Home.storyboard */ = {
+		DF5797D8255AB57E0030B4BC /* Punch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DF5797D9255AB57E0030B4BC /* Base */,
 			);
-			name = Home.storyboard;
+			name = Punch.storyboard;
 			sourceTree = "<group>";
 		};
 		DF5797DD255AB5810030B4BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DF5797DE255AB5810030B4BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DF579817255AC70A0030B4BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF579818255AC70A0030B4BC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -356,9 +471,12 @@
 		DF5797E4255AB5810030B4BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = AF2T6TGAP8;
 				INFOPLIST_FILE = Punchor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -366,6 +484,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiong.Punchor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Punchor-Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,9 +493,12 @@
 		DF5797E5255AB5810030B4BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = AF2T6TGAP8;
 				INFOPLIST_FILE = Punchor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,6 +506,51 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiong.Punchor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Punchor-Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF579820255AC70A0030B4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PunchorClip/PunchorClip.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = AF2T6TGAP8;
+				INFOPLIST_FILE = PunchorClip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiong.Punchor.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Punchor.Clip-Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF579821255AC70A0030B4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PunchorClip/PunchorClip.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = AF2T6TGAP8;
+				INFOPLIST_FILE = PunchorClip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiong.Punchor.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Punchor.Clip-Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -406,6 +573,15 @@
 			buildConfigurations = (
 				DF5797E4255AB5810030B4BC /* Debug */,
 				DF5797E5255AB5810030B4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF57981F255AC70A0030B4BC /* Build configuration list for PBXNativeTarget "PunchorClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF579820255AC70A0030B4BC /* Debug */,
+				DF579821255AC70A0030B4BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

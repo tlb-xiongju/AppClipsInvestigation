@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x92-Sr-vOx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x92-Sr-vOx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,10 +15,45 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="o79-cU-NUp" kind="relationship" relationship="viewControllers" id="KUi-ST-wst"/>
+                        <segue destination="2oF-Rr-pAc" kind="relationship" relationship="viewControllers" id="FRe-YF-PEJ"/>
+                        <segue destination="oDs-jy-RGM" kind="relationship" relationship="viewControllers" id="75x-Xd-EF3"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZML-YB-mHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220" y="377"/>
+        </scene>
+        <!--Punch-->
+        <scene sceneID="dSL-J4-C8M">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Punch" id="o79-cU-NUp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="打刻" id="rxs-dk-VL2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7Z-xw-rvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="242"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="7BE-kh-M3X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="History" id="2oF-Rr-pAc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="歴史" id="fcH-To-WzZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcK-kw-DZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="330"/>
+        </scene>
+        <!--Mine-->
+        <scene sceneID="cv8-Wv-Kbf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mine" id="oDs-jy-RGM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="マイ" id="ytG-LY-5Ay"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjz-W3-guP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="441"/>
         </scene>
     </scenes>
 </document>
