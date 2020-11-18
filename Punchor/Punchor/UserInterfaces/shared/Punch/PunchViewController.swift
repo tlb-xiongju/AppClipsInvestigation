@@ -7,13 +7,15 @@
 
 import UIKit
 import CoreLocation
+import StoreKit
 
 class PunchViewController: UIViewController {
-    struct State {
+    struct State: Then {
         var isLoading: Bool = false
         var didStart: Bool = false
         var didEnd: Bool = false
         var address: String = ""
+        var now: Date = Date()
     }
     
     @IBOutlet private weak var timeLabel: UILabel!
@@ -29,8 +31,9 @@ class PunchViewController: UIViewController {
             }
             
             goButton.isEnabled = !state.didStart
-            backButton.isEnabled = !state.didEnd
+            backButton.isEnabled = (state.didStart && !state.didEnd)
             addressLabel.text = state.address
+            timeLabel.text = DateFormatter.shortTime.string(from: state.now)
         }
     }
     
@@ -38,21 +41,26 @@ class PunchViewController: UIViewController {
         super.viewDidLoad()
         title = DateFormatter.fullDate.string(from: Date())
         
-        timeLabel.text = DateFormatter.shortTime.string(from: Date())
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            self.timeLabel.text = DateFormatter.shortTime.string(from: Date())
+            self.state = self.state.with { $0.now = Date() }
         }
         
         #if !APPCLIP
         locationManager.delegate = self
         if locationManager.authorizationStatus == .authorizedWhenInUse ||
             locationManager.authorizationStatus == .authorizedAlways {
-            state = State(isLoading: true, didStart: state.didStart, didEnd: state.didEnd, address: state.address)
+            state = state.with { $0.isLoading = true }
             locationManager.requestLocation()
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
         #else
+        
+        guard let scene = view.window?.windowScene else { return }
+        let config = SKOverlay.AppClipConfiguration(position: .bottom)
+        let overlay = SKOverlay(configuration: config)
+        overlay.present(in: scene)
+        
         #endif
     }
     
@@ -63,22 +71,22 @@ class PunchViewController: UIViewController {
     #endif
     
     @IBAction private func goButtonTap(_ sender: UIButton) {
-        state = State(isLoading: true, didStart: state.didStart, didEnd: state.didEnd, address: state.address)
-        PunchManager.shared.punch(.init(state: .start("11:23"), address: state.address)) {
-            self.state = State(isLoading: false,
-                               didStart: true,
-                               didEnd: self.state.didEnd,
-                               address: self.state.address)
+        state = state.with { $0.isLoading = true }
+        PunchManager.shared.punch(.init(state: .start(DateFormatter.shortTime.string(from: state.now)), address: state.address)) {
+            self.state = self.state.with {
+                $0.isLoading = false
+                $0.didStart = true
+            }
         }
     }
     
     @IBAction private func backButtonTap(_ sender: UIButton) {
-        state = State(isLoading: true, didStart: state.didStart, didEnd: state.didEnd, address: state.address)
-        PunchManager.shared.punch(.init(state: .start("11:23"), address: state.address)) {
-            self.state = State(isLoading: false,
-                               didStart: self.state.didStart,
-                               didEnd: true,
-                               address: self.state.address)
+        state = state.with { $0.isLoading = true }
+        PunchManager.shared.punch(.init(state: .end(DateFormatter.shortTime.string(from: state.now)), address: state.address)) {
+            self.state = self.state.with {
+                $0.isLoading = false
+                $0.didEnd = true
+            }
         }
     }
 }
@@ -87,10 +95,8 @@ extension PunchViewController: CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         if manager.authorizationStatus == .authorizedWhenInUse {
-            state = State(isLoading: true,
-                          didStart: state.didStart,
-                          didEnd: state.didEnd,
-                          address: state.address)
+            state = state.with { $0.isLoading = true }
+            
             locationManager.requestLocation()
         }
     }
@@ -99,19 +105,15 @@ extension PunchViewController: CLLocationManagerDelegate {
         guard !geocoder.isGeocoding, let location = locations.last else { return }
         
         geocoder.reverseGeocodeLocation(location) { placemark, error in
-            self.state = State(isLoading: false,
-                               didStart: self.state.didStart,
-                               didEnd: self.state.didEnd,
-                               address: placemark?.last?.adderss ?? "")
-            
+            self.state = self.state.with {
+                $0.isLoading = false
+                $0.address = placemark?.last?.adderss ?? ""
+            }
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        state = State(isLoading: true,
-                      didStart: state.didStart,
-                      didEnd: state.didEnd,
-                      address: state.address)
+        state = state.with { $0.isLoading = false }
     }
 }
 

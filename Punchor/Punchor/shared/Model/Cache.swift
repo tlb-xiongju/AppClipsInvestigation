@@ -20,8 +20,3 @@ final class Cache {
         self.fileName = fileName
     }
 }
-
-extension Cache {
-    func add(record: Record) {
-    }
-}
