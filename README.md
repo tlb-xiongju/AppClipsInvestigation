@@ -1,62 +1,42 @@
-# App Clips検討会
-App Clips、WWDC2020、SDK iOS14+、Xcode12+
+### AppClips概要
+1. ミニアプリ、小さい、本アプリの複数の機能の一つ
+2. インストールせずに、使い捨て
+3. 位置情報、URLリンク、QRCode、AppClip Codeをトリグルとして
 
-## はじめり
 
-### 概要
-本アプリの機能と重ねるミニアプリです、本アプリインストールされてなくても、ミニアプリで本アプリの複数の機能の中の一つが使えます。
-> 例え：  
-  カフェアプリ、本アプリはコーヒーを注文、ベネフィット受け取り、お気に入りリストなど、App Clips（ミニアプリ）はただ注文できます、それ以外の機能はありません。
+### 用例
+1. カフェアプリ：
+   本アプリは、注文、特典、お気に入りなど
+   ミニアプリは、ただ注文だけ
+   カフェ近づいたら、AppClip Cardは表示される
 
-### 使用例
-![](https://docs-assets.developer.apple.com/published/48ca06e0dc/original-1592505224.png)
+### 利用可能の技術点：
 
-条件達成 → AppClipsCard立ち上げ → AppClips起動 → 注文
 
-> 注：  
-  本アプリインストールされている場合、AppClips起動せず、代わりに本アプリ起動されます。  
-  つまり、条件達成 → AppClipsCard立ち上げ → 本アプリ起動 → 注文
+### 注意点
++ 一つ本アプリは、一つAppClipしか作れない
++ 本アプリはAppClipで機能含む
++ 10MB超えない
++ 本アプリの中、使えるフレームワークは、使えるけど、限定あり
++ バックグラウンドアクティビティー禁止
++ 機能簡単にする（複雑な機能は本アプリに移行、アプリ内課金やBluetoothペアリングなど）
 
-### 関連概念
-+ Invocation：AppClips起動するに必要な条件、QRCode、Webリンク、メッセージの中のURL、NFC、位置情報、Map
-+ AppClipsCard：システムはこのCardを立ち上げる、ユーザーは「Open」ボタンをタップでAppClips開く
 
-### その他
-+ AppClipsはホーム画面で表示されない
-+ 一定期間使わないなら、AppClipsはシステムに削除される
-
-## AppClipsつくる前
-
-### フレームワーク
-主に`SwiftUI`と`UIKit`、基本的に本アプリ使えるフレームワークはAppClipsも使えます。しかし、下記のフレームワークはある機能提供しないように制限されてます：`Assets Library`、`Background Tasks`、`CallKit`、`CareKit`、`CloudKit`、`Contacts`、`Contacts UI`、`Core Motion`、`EventKit`、`EventKit UI`、`File Provider`、`File Provider UI`、`HealthKit`、`HomeKit`、`Media Player`、`Messages`、`Message UI`、`PhotoKit`、`ResearchKit`、`SensorKit`と`Speech`。
-
-> 例：  
-  `HealthKit`の`isHeadthDataAvailable()`はAppClipsの中でいつもfalse返してる
-
-### 始まる前
-
-AppClipsは快速起動、ユーザー情報保護などには下記の制限があります：
-+ AppClipsのサイズは10MB超えない
-+ `SKAdNetwork`使えない
-+ App TrackingTransparencyでユーザーを追跡できない
-+ デバイスの`name`と`identifierForVendor`は空文字返す
-+ 連続位置情報取得できない
-+ 本アプリ以外のアプリとデータ共有できない
-+ システムアプリのデータアクセスできない
-  - Apple MusicとMediaにアクセスできない
-  - カレンダー、連絡先、ファイル、健康、メッセージ、リマインダーとアルバムにアクセスできない
-  - モーションとフィットネスのデータにアクセスできない
-+ バックグラウンドアクティビティできない
-  - バックグラウンドURLSessionできない
-  - AppClip使わない時、Bluetoothアクセスできない
-
-AppClips効率高めのため、下記の機能は本アプリに移行：
-+ 複雑なネットワーク機能
-+ App拡張機能
-+ カスタマイズ設定、
-+ データhandoff
-+ アプリ内購入
-+ 複数のシーン(iPad)
-+ 他のアプリ推薦
-+ URL scheme登録
-+ Bluetoothスキャン
+### 開発流れ
+1. 本アプリのプロジェクトに、AppClip target追加する
+   - AppClip target
+   - com.apple.developer.on-demand-install-capable entitlement（AppClip targetだけ)
+   - BundleIDは本アプリのBundleID.xxxになってる
+   - debug用_XCAppClipURLという環境変数
+2. 本アプリからコードなどを共有
+   - 本アプリは新しい場合、まずAppClipの機能決める
+   - 既存のプロジェクトにAppClip追加する場合、コードをリファクタリングしてからAppClipに共有
+   - assetsなど共有
+3. 共有コードの中、本アプリ用コードとAppClip用コード分ける
+   ```
+   #if APPCLIP
+      // Code used in App Clip
+   #else
+      // Code used in Parent App
+   #endif
+   ```
