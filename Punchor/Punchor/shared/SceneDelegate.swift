@@ -46,6 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func location(from url: URL) -> CLRegion? {
+        // urlからlatitudeとlongitude取得
         let coordinates = CLLocationCoordinate2D(latitude: 37.334722,
                                                  longitude: 122.008889)
         return CLCircularRegion(center: coordinates,

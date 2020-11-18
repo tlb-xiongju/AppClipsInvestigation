@@ -55,7 +55,7 @@ class PunchViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
         }
         #else
-        
+        // 本アプリ推薦
         guard let scene = view.window?.windowScene else { return }
         let config = SKOverlay.AppClipConfiguration(position: .bottom)
         let overlay = SKOverlay(configuration: config)
@@ -64,10 +64,10 @@ class PunchViewController: UIViewController {
         #endif
     }
     
+    private let geocoder = CLGeocoder()
     #if APPCLIP
     #else
     private let locationManager = CLLocationManager()
-    private let geocoder = CLGeocoder()
     #endif
     
     @IBAction private func goButtonTap(_ sender: UIButton) {
@@ -92,6 +92,19 @@ class PunchViewController: UIViewController {
 }
 
 #if APPCLIP
+extension PunchViewController {
+    // sceneからmatchされたlatitudeとlongitudeをCLLocation作って
+    func geocode(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        state = state.with { $0.isLoading = true }
+        
+        geocoder.reverseGeocodeLocation(.init(latitude: latitude, longitude: longitude)) { placemark, error in
+            self.state = self.state.with {
+                $0.isLoading = false
+                $0.address = placemark?.last?.adderss
+            }
+        }
+    }
+}
 #else
 extension PunchViewController: CLLocationManagerDelegate {
     
