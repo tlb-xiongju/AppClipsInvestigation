@@ -74,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		DF3622B125641AF50022586F /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		DF3623022564B55E0022586F /* Punchor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Punchor.entitlements; sourceTree = "<group>"; };
 		DF5797CF255AB57E0030B4BC /* Punchor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Punchor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5797D2255AB57E0030B4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF5797D4255AB57E0030B4BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		DF5797D1255AB57E0030B4BC /* Punchor */ = {
 			isa = PBXGroup;
 			children = (
+				DF3623022564B55E0022586F /* Punchor.entitlements */,
 				DFD374A825637B9A007FFAC1 /* shared */,
 				DF5797E7255AB6C60030B4BC /* UserInterfaces */,
 				DFD374A525637B38007FFAC1 /* View */,
@@ -594,6 +596,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Punchor/Punchor.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = AF2T6TGAP8;
@@ -616,6 +619,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Punchor/Punchor.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = AF2T6TGAP8;

@@ -6,9 +6,5 @@
 	<array>
 		<string>appclips:punch.xiong.com</string>
 	</array>
-	<key>com.apple.developer.parent-application-identifiers</key>
-	<array>
-		<string>$(AppIdentifierPrefix)com.xiong.Punchor</string>
-	</array>
 </dict>
 </plist>

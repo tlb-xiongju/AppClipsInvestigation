@@ -91,6 +91,8 @@ class PunchViewController: UIViewController {
     }
 }
 
+#if APPCLIP
+#else
 extension PunchViewController: CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -116,5 +118,6 @@ extension PunchViewController: CLLocationManagerDelegate {
         state = state.with { $0.isLoading = false }
     }
 }
+#endif
 
 extension PunchViewController: IndicatorDisplayable {}
