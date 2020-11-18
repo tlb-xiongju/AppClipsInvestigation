@@ -1,7 +1,7 @@
 ### AppClips概要
 1. ミニアプリ、小さい、本アプリの複数の機能の一つ
 2. インストールせずに、使い捨て
-3. Siriの位置提案、webバナー、QRCode、NFC、リンク、AppClip Codeをトリグルとして
+3. Siriの位置提案、Websiteバナー、QRCode、NFC、リンク、AppClip Codeをトリグルとして
 
 ### 用例
 1. カフェアプリ：
@@ -39,11 +39,13 @@
    ```
 4. Associate-Domains-Entitlementを本アプリとAppClipに追加
 5. Associate Domains URLの処理
+6. ...
 
 ### 技術ポイント：
+- 本アプリで使えるフレームワークは、AppClipも使える（制限あり）
 - 本アプリとAppClipコード共有のため、Active Compilation Conditionsでコード分ける
 - トリグルのURLでAppClipかアプリ起動するため、Associate Domainsオンにするのが必要だ
-- iOSシステムはAppClipCard表示するため、AppClipの配置認証が必要
+- Siri提案として表示されるため、AppClipの配置認証が必要
   ```
   {
     "appclips": {
@@ -52,3 +54,13 @@
     ...
   }
   ```
+- AppStoreConnectでAppClip Card配置。開発段階はiPhoneのDeveloperの中で配置できる
+- Invocationsで起動、NSUserActivity通じて情報とる
+- App Groupsで本アプリとAppClipの間データ共有、UserDefault（AppClipでkeychainに保存したデータは本アプリでアクセスできない）
+- SKOverlay使ってAppClipの中で本アプリ推薦
+- Notification可能
+- Test、AppClipの機能は本アプリ含まれてるので、主にAppClipの起動をテストする：
+  1. Xcodeの環境変数_XCAppClipURL
+  2. LocalExperience配置し、QRコードやNFCをスキャン
+  3. [TestFlight](https://help.apple.com/app-store-connect/#/devbc57e2ec6)
+- 配布：AppStoreへアップロードの際、本アプリとAppClipは一緒。EnterpriseアカはAppClip配布できない
