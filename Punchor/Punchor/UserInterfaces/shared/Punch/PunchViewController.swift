@@ -100,7 +100,7 @@ extension PunchViewController {
         geocoder.reverseGeocodeLocation(.init(latitude: latitude, longitude: longitude)) { placemark, error in
             self.state = self.state.with {
                 $0.isLoading = false
-                $0.address = placemark?.last?.adderss
+                $0.address = placemark?.last?.adderss ?? ""
             }
         }
     }
